@@ -1,0 +1,14 @@
+---
+- name: "Create {{ansible_inst_path}}"
+  file:
+    path: "{{ansible_inst_path}}"
+    state: "directory"
+    mode: "0755"
+  tags: [ never, infra ]
+
+- name: "Clone the Ansible git repo into {{ansible_inst_path}}"
+  git:
+    repo: "{{ansible_inst_repo}}"
+    dest: "{{ansible_inst_path}}"
+    version: "{{ansible_inst_ver}}"
+  tags: [ never, infra ]
