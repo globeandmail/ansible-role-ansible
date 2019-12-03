@@ -1,4 +1,3 @@
 ---
-ansible_inst_ver: "stable-2.9"
-ansible_inst_path: "/usr/local/ansible"
-ansible_inst_repo: "https://github.com/ansible/ansible.git"
+ansible_inst_ver: "2.9"
+ansible_inst_path: "~/venvs/ansible-{{ansible_inst_ver}}"
