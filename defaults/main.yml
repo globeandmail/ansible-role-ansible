@@ -1,3 +1,4 @@
 ---
 ansible_inst_ver: "2.9"
 ansible_inst_path: "~/venvs/ansible-{{ansible_inst_ver}}"
+ansible_venv_python: "python3.5"

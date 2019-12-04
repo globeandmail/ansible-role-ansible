@@ -1,11 +1,12 @@
 ---
 - name: "Install Dependencies"
   apt:
-    name: "{{item}}"
+    name:
+    - "python3-minimal"
+    - "python-pip"
+    - "python-virtualenv"
+    - "python-setuptools"
     state: "present"
-  loop:
-  - "python-pip"
-  - "python-virtualenv"
   tags: [ never, infra ]
 
 - name: "Create python VirtualEnv in {{ansible_inst_path}}"
@@ -13,4 +14,5 @@
     name: "ansible"
     version: "{{ ansible_inst_ver }}"
     virtualenv: "{{ ansible_inst_path }}"
+    virtualenv_python: "{{ ansible_venv_python }}"
   tags: [ never, infra ]
