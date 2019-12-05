@@ -15,4 +15,5 @@
     version: "{{ ansible_inst_ver }}"
     virtualenv: "{{ ansible_inst_path }}"
     virtualenv_python: "{{ ansible_venv_python }}"
+    state: "{{ ansible_inst_state }}"
   tags: [ never, infra ]
