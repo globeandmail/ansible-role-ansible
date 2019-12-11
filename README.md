@@ -1,7 +1,7 @@
 # ansible-role-ansible
 Install Ansible itself on Ubuntu target host(s), in a python virtual environment.
 
-#### This role will install the dependency 'python3-minimal' (Ansible will soon deprecate python 2.x support)
+#### This role will install the dependency 'python3-minimal' and use Python3.5 for the venvs.
 
 #### Please note that you must specify the tag "infra" in order for this playbook to do anything.
 
